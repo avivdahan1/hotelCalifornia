@@ -10,3 +10,16 @@ hotel[3] = rooms
 hotels[0] = tuple(hotel)
 
 print(hotels)
+
+hotels = [
+    (
+        101, "Hilton", "New York",
+        [(201, "Available", "Single"), (202, "Occupied", "Double")],
+        [("John Doe", "123456789", "2025-04-10")]
+    ),
+    (
+        102, "Marriott", "Boston",
+        [(301, "Available", "Single")],
+        [("Jane Smith", "987654321", "2025-05-15"), ("Bob Lee", "555555555", "2025-06-01")]
+    )
+]
