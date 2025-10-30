@@ -61,7 +61,34 @@ def add_room_type(hotels):
 
 def show_hotels(hotels):
     print(hotels)
+#Tal
+hotels = [(101, "Hilton", "New York",[(201, "Available", "Single"),(202, "Occupied", "Double")],[("John Doe", "123456789", "2025-04-10")])]
 
 
+
+
+def add_guest(hotels):
+    while True:
+        hotel_num = int(input('enter hotel number: '))
+        if hotel_num =='end'or hotel_num == 'End'or hotel_num =='':
+            break
+        gust_name = input('enter the gust name: ')
+        number_gust = int(input('enter the gust number: '))
+        leave_date = input('enter the leave date: ')
+        for hotel in hotels:
+            if hotel[0] == hotel_num:
+                hotel[4].append((hotel_num, gust_name, number_gust, leave_date))
+
+def update_guest_info(hotels):
+    while True:
+        hotel_num = int(input('enter hotel number: '))
+        if hotel_num == 'end' or hotel_num == 'End' or hotel_num == '':
+            break
+        gust_name = input('enter the gust name: ')
+        update_number = int(input('enter the gust number: '))
+        leave_update_date = input('enter the gust update leave date: ')
+        for hotel in hotels:
+            if hotel[0] == hotel_num:
+                hotel[4][0] = (hotel_num, gust_name, update_number, leave_update_date)
 
 
